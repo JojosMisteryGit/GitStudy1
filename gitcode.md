@@ -1,6 +1,6 @@
 # GitStudy1
 
-# Git 学習メモ(更新中)
+# Git 学習メモ
 
 -CUIコード:
 cd ~                                            :ホームディレクトリに移動
@@ -46,8 +46,9 @@ git remote -v                                   :リポジトリの設定を確�
 
 -========================================[情報更新]========================================
 git add .                                       :カレントディレクトリ配下のすべての変更を追加
+git add -A                                      :リポジトリ配下の全部の変更を追加
 git add xxx.(txt...)                            :配下の指定ファイルの変更を追加
-git add xxx(フォルダー名)                        :配下のサブフォルダー内の変更を追加
+git add xxx(folder_name)                        :配下のサブフォルダー内の変更を追加
 
 ※git add フォルダー名/ファイル名.(綴り)にすると指定サブフォルダー内指定ファイルで追加
 
@@ -85,10 +86,12 @@ git clone                                       :ブランチをクローンす�
 git pull                                        :チェックアウトした内容を同期する
 git branch (new_branch_name)                    :ブランチを新規作成する
 git switch                                      :ブランチ切り替え
+git switch -c (new_branch_name)                 :ブランチを新規作成してから切り替え
 git log                                         :ログ(コミット履歴)確認
 git log -p                                      :コミット前後の差分確認
-git push origin (branch_bame)                   :オリジナルブランチとしてGitHubにプッシュする
-
+git push origin (branch_name)                   :オリジナルブランチとしてGitHubにプッシュする
+git merge (branch_name)                         :ブランチをマージする(branch_nameはマージ先)
+git cherry-pick (log)                           :ブランチの変更を取り入れる(vesrion:log)
 code xxx(path)                                  :このパスは以下のファイルをVSCodeで開く
 code .                                          :カレントディレクトリ配下の内容をVSCodeで開く
 
